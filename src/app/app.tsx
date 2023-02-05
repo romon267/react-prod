@@ -1,10 +1,8 @@
 import "@app/styles/index.scss";
-import {Link, Route, Routes} from "react-router-dom";
-import {Suspense} from "react";
-import {HomePageLazy} from "@pages/home-page";
-import {AboutPageLazy} from "@pages/about-page";
+import {Link} from "react-router-dom";
 import {useTheme} from "@app/providers/theme-provider";
 import {classNames} from "@shared/class-names";
+import AppRouter from "@app/providers/router/ui/app-router";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -12,17 +10,11 @@ export const App = () => {
 
     return <div className={classNames('app', {}, [theme])}>
         <div>
-            <Link to={'/home'}>Home</Link>
+            <Link to={'/'}>Home</Link>
             <Link to={'/about'}>About</Link>
             <button onClick={toggleTheme}>toggle</button>
+            <AppRouter />
         </div>
-        <div>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={'/home'} element={<HomePageLazy />}/>
-                    <Route path={'/about'} element={<AboutPageLazy />}/>
-                </Routes>
-            </Suspense>
-        </div>
+
     </div>
 }
