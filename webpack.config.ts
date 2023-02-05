@@ -5,7 +5,8 @@ import {BuildEnv, BuildPaths} from "./config/build/types/config";
 const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: path.resolve(__dirname, 'build'),
-    html: path.resolve(__dirname, 'public', 'index.html')
+    html: path.resolve(__dirname, 'public', 'index.html'),
+    src: path.resolve(__dirname, 'src'),
 }
 
 
@@ -15,9 +16,6 @@ module.exports = (env: BuildEnv) => {
     const port = env.port || 3000
 
     const isDev = mode === 'development'
-
-    console.log("env", env)
-
 
     return buildWebpackConfig({
         mode,

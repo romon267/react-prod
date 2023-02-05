@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./build/",
+    "lib": ["es6", "dom"],
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
@@ -9,16 +10,22 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-//    "paths": {
-//      "@config/*": ["config/*"],
-//      "*": ["*"]
-//    },
-//    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@pages/*": ["src/pages/*"],
+      "@features/*": ["src/features/*"],
+      "@entities/*": ["src/entities/*"],
+      "@shared/*": ["src/shared/*"],
+      "@widgets/*": ["src/entities/*"],
+      "*": ["*"]
+    },
+    "baseUrl": "./"
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
   },
-  "include": ["src", "config"]
+  "include": ["./src", "./config"],
+  "exclude": ["node_modules", "build"]
 }
