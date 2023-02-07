@@ -10,7 +10,7 @@ interface AppLinkProps extends LinkProps {
     className?: string;
 }
 
-function AppLink(props: AppLinkProps) {
+export const AppLink = (props: AppLinkProps) => {
     const {
         to,
         theme = 'primary',
@@ -25,5 +25,3 @@ function AppLink(props: AppLinkProps) {
         </Link>
     );
 }
-
-export default AppLink;
