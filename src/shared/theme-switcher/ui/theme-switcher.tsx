@@ -8,15 +8,16 @@ import {Button} from "@shared/button";
 
 interface ThemeSwitcherProps {
     className?: string;
+    size?: number;
 }
 
 export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
-    const {className} = props;
+    const {className, size = 24} = props;
     const {toggleTheme, theme} = useTheme();
 
     return (
         <Button theme={"clear"} className={classNames(className)} onClick={toggleTheme}>
-            {theme === Theme.DARK ? <SunIcon width={24} height={24} /> : <MoonIcon fill="#fff" stroke="#fff" width={24} height={24} />}
+            {theme === Theme.DARK ? <SunIcon width={size} height={size} /> : <MoonIcon fill="#fff" stroke="#fff" width={size} height={size} />}
         </Button>
     );
 }
