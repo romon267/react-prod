@@ -1,1 +1,1 @@
-export {HomePageLazy} from "./ui/home-page.lazy"
+export { HomePageLazy } from './ui/home-page.lazy'

@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
-import cls from "./sidebar.module.scss";
-import {classNames} from "@shared/class-names";
-import {ThemeSwitcher} from "@shared/theme-switcher";
-import {useTranslation} from "react-i18next";
-import {LangSwitcher} from "@shared/lang-switcher/ui/lang-switcher";
+import { useState } from 'react'
+import { classNames } from '@shared/class-names'
+import { ThemeSwitcher } from '@shared/theme-switcher'
+import { useTranslation } from 'react-i18next'
+import { LangSwitcher } from '@shared/lang-switcher/ui/lang-switcher'
+import cls from './sidebar.module.scss'
 
-export const Sidebar = () => {
-    const [collapsed, setCollapsed] = useState(false);
-    const {t} = useTranslation();
+export function Sidebar() {
+    const [collapsed, setCollapsed] = useState(false)
+    const { t } = useTranslation()
 
     const onToggle = () => {
-        setCollapsed((prev) => !prev);
+        setCollapsed((prev) => !prev)
     }
 
     return (
-        <div className={classNames(cls.sidebar, {[cls.collapsed]: collapsed}, [])}>
-            <button onClick={onToggle}>{t('toggle')}</button>
+        <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [])}>
+            <button type="button" onClick={onToggle}>{t('toggle')}</button>
             <div className={cls.switchers}>
                 <LangSwitcher />
                 <ThemeSwitcher size={40} />
             </div>
         </div>
-    );
-};
+    )
+}

@@ -1,6 +1,6 @@
-import React, {ButtonHTMLAttributes, FC} from 'react';
-import {classNames} from "@shared/class-names";
-import cls from "./button.module.scss";
+import React, { ButtonHTMLAttributes } from 'react'
+import { classNames } from '@shared/class-names'
+import cls from './button.module.scss'
 
 type ButtonTheme = 'clear' | 'primary';
 
@@ -9,11 +9,13 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
 }
 
-export const Button: FC<ButtonProps> = (props: ButtonProps) => {
-    const {theme, className, children, ...otherProps} = props;
+export function Button(props: ButtonProps) {
+    const {
+        theme, className, children, ...otherProps
+    } = props
     return (
-        <button className={classNames(cls.button, {}, [cls[theme], className])} {...otherProps}>
+        <button type="button" className={classNames(cls.button, {}, [cls[theme], className])} {...otherProps}>
             {children}
         </button>
-    );
-};
+    )
+}

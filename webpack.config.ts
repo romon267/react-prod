@@ -1,6 +1,7 @@
-import path from 'path';
-import {buildWebpackConfig} from "./config/build/buildWebpackConfig";
-import {BuildEnv, BuildPaths} from "./config/build/types/config";
+// @ts-ignore
+import path from 'path'
+import { buildWebpackConfig } from './config/build/buildWebpackConfig'
+import { BuildEnv, BuildPaths } from './config/build/types/config'
 
 const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
@@ -8,8 +9,6 @@ const paths: BuildPaths = {
     html: path.resolve(__dirname, 'public', 'index.html'),
     src: path.resolve(__dirname, 'src'),
 }
-
-
 
 module.exports = (env: BuildEnv) => {
     const mode = env.mode || 'development'
@@ -21,6 +20,6 @@ module.exports = (env: BuildEnv) => {
         mode,
         paths,
         isDev,
-        port
+        port,
     })
 }

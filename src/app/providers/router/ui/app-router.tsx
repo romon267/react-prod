@@ -1,10 +1,10 @@
-import React, {Suspense} from 'react';
-import {Route, Routes} from "react-router-dom";
-import {routeConfig} from "../config/route-config";
-import {useTranslation} from "react-i18next";
+import React, { Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { routeConfig } from '../config/route-config'
 
 function AppRouter() {
-    const {t} = useTranslation();
+    const { t } = useTranslation()
 
     return (
         <div>
@@ -12,18 +12,20 @@ function AppRouter() {
                 <Routes>
                     {Object.values(routeConfig)
                         .map(
-                            ({element, path}) => (<Route
-                                key={path}
-                                path={path}
-                                element={
-                                <div className={"page-wrapper"}>{element}</div>
-                            } />)
-                        )
-                    }
+                            ({ element, path }) => (
+                                <Route
+                                    key={path}
+                                    path={path}
+                                    element={
+                                        <div className="page-wrapper">{element}</div>
+                                    }
+                                />
+                            ),
+                        )}
                 </Routes>
             </Suspense>
         </div>
-    );
+    )
 }
 
-export default AppRouter;
+export default AppRouter
