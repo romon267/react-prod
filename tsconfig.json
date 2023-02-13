@@ -1,31 +1,31 @@
 {
-  "compilerOptions": {
-    "outDir": "./build/",
-    "lib": ["es6", "dom"],
-    "noImplicitAny": true,
-    "module": "ESNext",
-    "target": "es5",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "paths": {
-      "@app/*": ["src/app/*"],
-      "@pages/*": ["src/pages/*"],
-      "@features/*": ["src/features/*"],
-      "@entities/*": ["src/entities/*"],
-      "@shared/*": ["src/shared/*"],
-      "@widgets/*": ["src/widgets/*"],
-      "*": ["*"]
-    },
-    "baseUrl": "./"
-  },
-  "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": ["./src", "./config"],
-  "exclude": ["node_modules", "build"]
+        "outDir": "./build/",
+        "lib": ["es6", "dom"],
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "paths": {
+            "@app/*": ["src/app/*"],
+            "@pages/*": ["src/pages/*"],
+            "@features/*": ["src/features/*"],
+            "@entities/*": ["src/entities/*"],
+            "@shared/*": ["src/shared/*"],
+            "@widgets/*": ["src/widgets/*"],
+            "*": ["*"]
+        },
+        "baseUrl": "./"
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": ["./src", "./config"],
+    "exclude": ["node_modules", "build"]
 }

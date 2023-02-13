@@ -1,7 +1,7 @@
 module.exports = {
     env: {
         browser: true,
-        es2021: true,
+        es2021: true
     },
     extends: [
         'eslint:recommended',
@@ -9,39 +9,23 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'prettier'
     ],
-    overrides: [
-    ],
+    overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: 'module',
+        sourceType: 'module'
     },
-    plugins: [
-        'react',
-        '@typescript-eslint',
-        'i18next',
-    ],
+    plugins: ['react', '@typescript-eslint', 'i18next'],
     rules: {
-        indent: [
-            'error',
-            4,
-        ],
+        indent: ['error', 4],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
-        'linebreak-style': [
-            'error',
-            'unix',
-        ],
-        quotes: [
-            'error',
-            'single',
-        ],
-        semi: [
-            'error',
-            'never',
-        ],
+        'linebreak-style': ['error', 'unix'],
+        quotes: ['error', 'single'],
+        semi: ['error', 'never'],
         'import/prefer-default-export': 'off',
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
@@ -53,9 +37,9 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         'no-shadow': 'warn',
         'react/function-component-definition': 'off',
-        'no-underscore-dangle': 'off',
+        'no-underscore-dangle': 'off'
     },
     globals: {
-        __IS_DEV__: true,
-    },
+        __IS_DEV__: true
+    }
 }

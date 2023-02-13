@@ -10,18 +10,13 @@ function AppRouter() {
         <div>
             <Suspense fallback={<div>{t('Loading...')}</div>}>
                 <Routes>
-                    {Object.values(routeConfig)
-                        .map(
-                            ({ element, path }) => (
-                                <Route
-                                    key={path}
-                                    path={path}
-                                    element={
-                                        <div className="page-wrapper">{element}</div>
-                                    }
-                                />
-                            ),
-                        )}
+                    {Object.values(routeConfig).map(({ element, path }) => (
+                        <Route
+                            key={path}
+                            path={path}
+                            element={<div className="page-wrapper">{element}</div>}
+                        />
+                    ))}
                 </Routes>
             </Suspense>
         </div>

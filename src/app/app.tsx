@@ -18,7 +18,6 @@ export function App() {
                     <AppRouter />
                 </div>
             </Suspense>
-
         </div>
     )
 }

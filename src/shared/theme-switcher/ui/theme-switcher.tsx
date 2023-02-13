@@ -6,8 +6,8 @@ import SunIcon from '@shared/assets/icons/sun.svg'
 import { Button } from '@shared/button'
 
 interface ThemeSwitcherProps {
-    className?: string;
-    size?: number;
+    className?: string
+    size?: number
 }
 
 export function ThemeSwitcher(props: ThemeSwitcherProps) {
@@ -16,7 +16,11 @@ export function ThemeSwitcher(props: ThemeSwitcherProps) {
 
     return (
         <Button theme="clear" className={classNames(className)} onClick={toggleTheme}>
-            {theme === Theme.DARK ? <SunIcon width={size} height={size} /> : <MoonIcon fill="#fff" stroke="#fff" width={size} height={size} />}
+            {theme === Theme.DARK ? (
+                <SunIcon width={size} height={size} />
+            ) : (
+                <MoonIcon fill="#fff" stroke="#fff" width={size} height={size} />
+            )}
         </Button>
     )
 }

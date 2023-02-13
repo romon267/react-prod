@@ -10,9 +10,12 @@ function Navbar() {
     return (
         <div className={classNames(cls.navbar, {}, [])}>
             <div className={classNames(cls.navbarLinksWrapper, {}, [])}>
-                <AppLink theme="secondary" to="/">{t('Home')}</AppLink>
-                <AppLink theme="secondary" to="/about">{t('About')}</AppLink>
-
+                <AppLink theme="secondary" to="/">
+                    {t('Home')}
+                </AppLink>
+                <AppLink theme="secondary" to="/about">
+                    {t('About')}
+                </AppLink>
             </div>
         </div>
     )

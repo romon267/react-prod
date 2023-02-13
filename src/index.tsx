@@ -13,5 +13,5 @@ render(
             <App />
         </ThemeProvider>
     </BrowserRouter>,
-    rootContainer,
+    rootContainer
 )

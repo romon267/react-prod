@@ -3,21 +3,15 @@ import { Link, LinkProps } from 'react-router-dom'
 import { classNames } from '@shared/class-names'
 import cls from './app-link.module.scss'
 
-type AppLinkTheme = 'primary' | 'secondary';
+type AppLinkTheme = 'primary' | 'secondary'
 
 interface AppLinkProps extends LinkProps {
-    theme?: AppLinkTheme;
-    className?: string;
+    theme?: AppLinkTheme
+    className?: string
 }
 
 export function AppLink(props: AppLinkProps) {
-    const {
-        to,
-        theme = 'primary',
-        className,
-        children,
-        ...linkProps
-    } = props
+    const { to, theme = 'primary', className, children, ...linkProps } = props
 
     return (
         <Link

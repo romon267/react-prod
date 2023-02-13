@@ -7,7 +7,7 @@ const paths: BuildPaths = {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: path.resolve(__dirname, 'build'),
     html: path.resolve(__dirname, 'public', 'index.html'),
-    src: path.resolve(__dirname, 'src'),
+    src: path.resolve(__dirname, 'src')
 }
 
 module.exports = (env: BuildEnv) => {
@@ -20,6 +20,6 @@ module.exports = (env: BuildEnv) => {
         mode,
         paths,
         isDev,
-        port,
+        port
     })
 }
