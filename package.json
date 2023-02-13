@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --env mode=production",
     "start": "webpack serve --env mode=development port=3000",
-    "eslint:fix": "eslint \"**/*.{js,ts,tsx}\" --fix"
+    "lint:ts:fix": "eslint \"**/*.{js,ts,tsx}\" --fix",
+    "lint:scss:fix": "stylelint \"**/*.scss\" --fix"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
     "css-loader": "^6.6.0",
     "eslint": "^8.33.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-i18next": "^6.0.0-2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
@@ -36,6 +38,8 @@
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^15.1.0",
+    "stylelint-config-standard-scss": "^7.0.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5",

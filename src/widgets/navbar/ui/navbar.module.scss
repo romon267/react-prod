@@ -1,16 +1,16 @@
 .navbar {
-  height: var(--navbar-height);
-  width: 100%;
-  background: var(--header-bg);
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  padding: 20px
+    height: var(--navbar-height);
+    width: 100%;
+    background: var(--header-bg);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 20px
 }
 
 .navbarLinksWrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-  width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: fit-content;
 }
