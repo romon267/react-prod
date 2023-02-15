@@ -15,11 +15,20 @@ export function ThemeSwitcher(props: ThemeSwitcherProps) {
     const { toggleTheme, theme } = useTheme()
 
     return (
-        <Button theme="clear" className={classNames(className)} onClick={toggleTheme}>
+        <Button
+            theme="clear"
+            className={classNames(className)}
+            onClick={toggleTheme}
+        >
             {theme === Theme.DARK ? (
                 <SunIcon width={size} height={size} />
             ) : (
-                <MoonIcon fill="#fff" stroke="#fff" width={size} height={size} />
+                <MoonIcon
+                    fill="#fff"
+                    stroke="#fff"
+                    width={size}
+                    height={size}
+                />
             )}
         </Button>
     )

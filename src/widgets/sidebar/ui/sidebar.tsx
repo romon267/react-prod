@@ -14,7 +14,13 @@ export function Sidebar() {
     }
 
     return (
-        <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [])}>
+        <div
+            className={classNames(
+                cls.sidebar,
+                { [cls.collapsed]: collapsed },
+                []
+            )}
+        >
             <button type="button" onClick={onToggle}>
                 {t('toggle')}
             </button>
