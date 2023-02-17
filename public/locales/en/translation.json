@@ -5,5 +5,7 @@
     "About": "About",
     "Home": "Home",
     "toggle": "toggle",
-    "Not found": "Page Not Found"
+    "Not found": "Page Not Found",
+    "Reload": "Reload",
+    "Something went wrong. Please reload page.": "Something went wrong. Please reload page."
 }

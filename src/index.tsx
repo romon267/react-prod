@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom'
 import ThemeProvider from '@app/providers/theme-provider/ui/theme-provider'
 
 import '@shared/config/i18n/i18n'
+import { GlobalErrorBoundary } from '@widgets/global-error-boundary'
 
 const rootContainer = document.getElementById('root')
 
 render(
     <BrowserRouter>
         <ThemeProvider>
-            <App />
+            <GlobalErrorBoundary>
+                <App />
+            </GlobalErrorBoundary>
         </ThemeProvider>
     </BrowserRouter>,
     rootContainer

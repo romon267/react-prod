@@ -5,5 +5,7 @@
     "About": "О нас",
     "Home": "Главная",
     "toggle": "жмак",
-    "Not found": "Страница не найдена"
+    "Not found": "Страница не найдена",
+    "Reload": "Перезагрузить",
+    "Something went wrong. Please reload page.": "Что-то пошло не так, перезагрузите страницу."
 }

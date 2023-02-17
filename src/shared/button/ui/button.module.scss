@@ -6,3 +6,10 @@
   border: none;
   outline: none;
 }
+
+.primary {
+  background-color: var(--header-bg);
+  color: var(--primary-color);
+  border-radius: var(--border-8);
+  padding: 4px 8px;
+}
