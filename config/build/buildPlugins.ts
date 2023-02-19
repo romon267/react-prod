@@ -2,8 +2,9 @@ import webpack from 'webpack'
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BuildOptions } from './types/config'
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, analyze }: BuildOptions): webpack.WebpackPluginInstance[] {
     return [
         new webpack.ProgressPlugin(),
         new MiniCssExtractPlugin({
@@ -18,5 +19,9 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
         }),
         new webpack.HotModuleReplacementPlugin(),
         // new ReactRefreshPlugin()
+        new BundleAnalyzerPlugin({
+            openAnalyzer: analyze,
+            analyzerMode: analyze ? 'server' : 'disabled'
+        })
     ]
 }
