@@ -5,12 +5,12 @@ import cls from './button.module.scss'
 type ButtonTheme = 'clear' | 'primary'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    theme: ButtonTheme
+    theme?: ButtonTheme
     className?: string
 }
 
 export function Button(props: ButtonProps) {
-    const { theme, className, children, ...otherProps } = props
+    const { theme = 'clear', className, children, ...otherProps } = props
     return (
         <button
             type="button"

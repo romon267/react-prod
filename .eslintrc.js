@@ -41,7 +41,11 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         'no-shadow': 'warn',
         'react/function-component-definition': 'off',
-        'no-underscore-dangle': 'off'
+        'no-underscore-dangle': 'off',
+        'import/no-extraneous-dependencies': [
+            'error',
+            { devDependencies: true }
+        ]
     },
     globals: {
         __IS_DEV__: true

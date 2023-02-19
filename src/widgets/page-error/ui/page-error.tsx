@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button } from '@shared/button'
+import { Button } from '@shared/ui/button'
 import cls from './page-error.module.scss'
 
 export const PageError = () => {
