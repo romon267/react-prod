@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path'
+
 export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -78,14 +80,15 @@ export default {
     //     '^@features(.*)$': '<rootDir>/src/features$1',
     //     '^@pages(.*)$': '<rootDir>/src/pages$1'
     // },
-    'moduleNameMapper': {
+    moduleNameMapper: {
+        '\\.(css|less|scss|sss|styl)$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jest-empty-component.tsx'),
         '^@shared(.*)$': '<rootDir>/src/shared$1',
         '^@app(.*)$': '<rootDir>/src/app$1',
         '^@entities(.*)$': '<rootDir>/src/entities$1',
         '^@widgets(.*)$': '<rootDir>/src/widgets$1',
         '^@features(.*)$': '<rootDir>/src/features$1',
-        '^@pages(.*)$': '<rootDir>/src/pages$1',
-        '\\.(css|less|scss|sss|styl)$': 'identity-obj-proxy'
+        '^@pages(.*)$': '<rootDir>/src/pages$1'
     },
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader

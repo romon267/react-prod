@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Sidebar.Sidebar render" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
+    <config-file value="$PROJECT_DIR$/config/jest/jest.config.ts" />
+    <node-interpreter value="project" />
+    <node-options value="" />
+    <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+    <working-dir value="$PROJECT_DIR$" />
+    <envs />
+    <scope-kind value="TEST" />
+    <test-file value="$PROJECT_DIR$/src/widgets/sidebar/ui/sidebar.test.tsx" />
+    <test-names>
+      <test-name value="Sidebar" />
+      <test-name value="Sidebar render" />
+    </test-names>
+    <method v="2" />
+  </configuration>
+</component>

@@ -20,8 +20,13 @@ export function Sidebar() {
                 { [cls.collapsed]: collapsed },
                 []
             )}
+            data-testid="sidebar"
         >
-            <button type="button" onClick={onToggle}>
+            <button
+                data-testid="toggle-collapse-btn"
+                type="button"
+                onClick={onToggle}
+            >
                 {t('toggle')}
             </button>
             <div className={cls.switchers}>
