@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, LinkProps } from 'react-router-dom'
-import { classNames } from '@shared/class-names'
+import { classNames } from '@shared/lib/class-names'
 import cls from './app-link.module.scss'
 
 type AppLinkTheme = 'primary' | 'secondary'

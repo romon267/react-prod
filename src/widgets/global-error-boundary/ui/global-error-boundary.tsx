@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import { ErrorBoundary } from '@shared/error-boundary'
+import { ErrorBoundary } from '@shared/ui/error-boundary'
 import { PageError } from '@widgets/page-error'
 
 interface GlobalErrorBoundaryProps {

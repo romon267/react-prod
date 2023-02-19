@@ -1,6 +1,6 @@
 import '@app/styles/index.scss'
 import { useTheme } from '@app/providers/theme-provider'
-import { classNames } from '@shared/class-names'
+import { classNames } from '@shared/lib/class-names'
 import AppRouter from '@app/providers/router/ui/app-router'
 import Navbar from '@widgets/navbar/ui/navbar'
 import { Sidebar } from '@widgets/sidebar'
