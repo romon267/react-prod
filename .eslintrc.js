@@ -10,7 +10,8 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'airbnb',
         'plugin:i18next/recommended',
-        'prettier'
+        'prettier',
+        'plugin:storybook/recommended'
     ],
     overrides: [],
     parser: '@typescript-eslint/parser',
@@ -25,7 +26,9 @@ module.exports = {
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [
             1,
-            { extensions: ['.js', '.jsx', '.tsx'] }
+            {
+                extensions: ['.js', '.jsx', '.tsx']
+            }
         ],
         'linebreak-style': ['error', 'unix'],
         quotes: ['error', 'single'],
@@ -44,7 +47,9 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'import/no-extraneous-dependencies': [
             'error',
-            { devDependencies: true }
+            {
+                devDependencies: true
+            }
         ]
     },
     globals: {

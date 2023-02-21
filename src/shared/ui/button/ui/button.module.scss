@@ -8,8 +8,16 @@
 }
 
 .primary {
-  background-color: var(--header-bg);
+  background-color: var(--secondary-color);
   color: var(--primary-color);
   border-radius: var(--border-8);
   padding: 4px 8px;
+}
+
+.outline {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: var(--border-8);
+  padding: 4px 8px;
+  border: 2px solid var(--header-bg);
 }

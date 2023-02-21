@@ -4,7 +4,7 @@ import { AppLink } from '@shared/ui/app-link'
 import { useTranslation } from 'react-i18next'
 import cls from './navbar.module.scss'
 
-function Navbar() {
+export function Navbar() {
     const { t } = useTranslation()
 
     return (
@@ -20,5 +20,3 @@ function Navbar() {
         </div>
     )
 }
-
-export default Navbar
