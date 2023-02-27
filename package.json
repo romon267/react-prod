@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env mode=production",
+    "build:prod": "webpack --env mode=production",
     "start": "webpack serve --env mode=development port=3000",
     "analyze:prod": "npm run build --env analyze=true",
     "prettier:reformat": "prettier --write .",
+    "lint:ts": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:scss": "stylelint \"**/*.scss\"",
     "lint:ts:fix": "eslint \"**/*.{js,ts,tsx}\" --fix",
     "lint:scss:fix": "stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
-    "build:storybook": "build-storybook ./config/storybook"
+    "storybook:build": "build-storybook -c ./config/storybook"
   },
   "keywords": [],
   "author": "",
